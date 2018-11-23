@@ -6,7 +6,7 @@
  *
  * @return array
  */
-function triFusion($plages, $callBack = 'triNaturel')
+function triFusion($plages, $callBack = 'compareNaturel')
 {
     $length = count($plages);
     if ($length == 1) {
@@ -28,7 +28,7 @@ function triFusion($plages, $callBack = 'triNaturel')
  *
  * @return array
  */
-function fusion($plageA, $plageB, $callBack = 'triNaturel')
+function fusion($plageA, $plageB, $callBack = 'compareNaturel')
 {
     if (empty($plageA)) {
         return $plageB;
@@ -65,7 +65,7 @@ function fusion($plageA, $plageB, $callBack = 'triNaturel')
  *
  * @return int
  */
-function triNaturel($a, $b)
+function compareNaturel($a, $b)
 {
     if ($a == $b) {
         return 0;
@@ -84,7 +84,7 @@ function triNaturel($a, $b)
  *
  * @return array
  */
-function contigue($plages, $callable = 'triNaturel')
+function contigue($plages, $callable = 'compareNaturel')
 {
     $triPlages = triFusion($plages, $callable);
 
